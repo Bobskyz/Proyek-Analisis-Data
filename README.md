@@ -32,7 +32,7 @@ Proyek ini menganalisis dataset e-commerce public Brazil yang mencakup data dari
 ## 📁 Struktur Folder
 
 ```
-Proyek Akhir/
+Proyek-Analisis-Data/
 ├── Proyek_Analisis_Data.ipynb          # Notebook analisis lengkap
 ├── dashboard.py                         # Dashboard interaktif Streamlit
 ├── requirements.txt                     # Daftar library Python yang diperlukan
