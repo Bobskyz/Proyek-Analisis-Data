@@ -174,8 +174,8 @@ Untuk pertanyaan atau bantuan, silakan hubungi:
 
 ## 📄 License
 
-Dataset: E-Commerce Public Dataset (Brazilian E-Commerce) by Olist
-Proyek Akhir Kelas Belajar Fundamental Analisis Data di Coding Camp
+Dataset: E-Commerce Public Dataset (Brazilian E-Commerce) by Olist<br>
+Proyek Akhir Kelas Belajar Fundamental Analisis Data Coding Camp
 
 ---
 
