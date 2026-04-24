@@ -8,17 +8,6 @@ Proyek analisis data e-commerce Brazil yang mencakup eksplorasi data, visualisas
 
 ---
 
-## 📋 Daftar Isi
-
-- [Tentang Proyek](#tentang-proyek)
-- [Struktur Folder](#struktur-folder)
-- [Instalasi](#instalasi)
-- [Menjalankan Analisis Notebook](#menjalankan-analisis-notebook)
-- [Menjalankan Dashboard](#menjalankan-dashboard)
-- [Pertanyaan Bisnis & Insight](#pertanyaan-bisnis--insight)
-
----
-
 ## 📊 Tentang Proyek
 
 Proyek ini menganalisis dataset e-commerce public Brazil yang mencakup data dari Oktober 2016 hingga Agustus 2018. Analisis berfokus pada:
