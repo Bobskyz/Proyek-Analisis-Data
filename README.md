@@ -54,38 +54,69 @@ Proyek-Analisis-Data/
 ## 🔧 Instalasi
 
 ### Prasyarat
-- Python 3.8 atau lebih tinggi
-- pip (Python package manager)
+- **Python 3.13.13** (atau versi kompatibel)
+- **VS Code** dengan extension Jupyter dan Python Debugger
+- **pip** (Python package manager)
 
 ### Langkah-langkah Instalasi
 
-1. **Buka Terminal/Command Prompt** dan navigasi ke folder proyek:
-   ```bash
+1. **Pastikan Python 3.13.13 Terinstall**:
+   ```powershell
+   python --version
+   ```
+   Output seharusnya: `Python 3.13.13`
+
+2. **Buka Terminal/PowerShell** dan navigasi ke folder proyek (Sesuaikan dengan path direktori masing-masing):
+   ```powershell
    cd "c:\Users\ASUS\Documents\Coding Camp Powered by DBS Foundation (Data Scientist)\Belajar Fundamental Analisis Data\Proyek Akhir"
    ```
 
-2. **Buat Virtual Environment (Opsional tapi direkomendasikan)**:
-   ```bash
+3. **Buat Virtual Environment (Opsional tapi Direkomendasikan)**:
+   ```powershell
    python -m venv venv
    venv\Scripts\activate
    ```
 
-3. **Install Dependencies**:
-   ```bash
+4. **Install Dependencies dari requirements.txt**:
+   ```powershell
    pip install -r requirements.txt
+   ```VS Code (Direkomendasikan) ⭐
+
+**Environment Setup:**
+- **Kernel Python**: 3.13.13
+- **Editor**: Visual Studio Code
+- **Extensions**: Jupyter, Python, Python Debugger
+
+**Langkah-langkah:**
+
+1. **Buka file notebook** di VS Code:
+   ```powershell
+   code Proyek_Analisis_Data.ipynb
    ```
 
----
+2. **Pilih Python Kernel**:
+   - Klik tombol kernel selector di bagian atas notebook (biasanya tertulis "Python 3.x.x")
+   - Pilih **Python 3.13.13** dari daftar yang tersedia
+   - Atau gunakan command palette: `Ctrl + Shift + P` → "Python: Select Kernel" → Pilih 3.13.13
 
-## 📓 Menjalankan Analisis Notebook
+3. **Jalankan Cells**:
+   - Klik tombol ▶️ (Run Cell) untuk menjalankan cell individual
+   - Tekan `Shift + Enter` untuk menjalankan cell dan lanjut ke cell berikutnya
+   - Tekan `Ctrl + Alt + Enter` untuk menjalankan cell tanpa pindah
 
-### Menggunakan Jupyter Notebook
+4. **Jalankan Semua Cells** (Run All):
+   - Klik ⏩ (Run All Cells) di toolbar notebook
+   - Atau gunakan command palette: `Ctrl + Shift + P` → "Notebook: Run All Cells"
 
-1. **Buka Jupyter Notebook**:
-   ```bash
-   jupyter notebook
-   ```
+### Alternative: Menggunakan Jupyter Notebook
 
+Jika ingin menggunakan Jupyter Notebook di browser:
+
+```powershell
+jupyter notebook
+```
+
+Kemudian buka `Proyek_Analisis_Data.ipynb` dari browser.
 2. **Buka file** `Proyek_Analisis_Data.ipynb` dari browser yang terbuka
 
 3. **Jalankan setiap cell** secara berurutan atau gunakan `Run All`:
@@ -108,17 +139,22 @@ Dashboard interaktif dibangun dengan **Streamlit** dan memungkinkan visualisasi 
 
 1. **Pastikan Anda sudah install dependencies** (lihat bagian [Instalasi](#instalasi))
 
-2. **Buka Terminal/Command Prompt** dan navigasi ke folder proyek:
-   ```bash
+2. **Buka Terminal/PowerShell** dan navigasi ke folder proyek (Sesuaikan dengan path direktori masing-masing):
+   ```powershell
    cd "c:\Users\ASUS\Documents\Coding Camp Powered by DBS Foundation (Data Scientist)\Belajar Fundamental Analisis Data\Proyek Akhir"
    ```
 
-3. **Jalankan Dashboard**:
-   ```bash
+3. **Pastikan virtual environment aktif** (jika dibuat):
+   ```powershell
+   venv\Scripts\activate
+   ```
+
+4. **Jalankan Dashboard**:
+   ```powershell
    streamlit run dashboard.py
    ```
 
-4. **Browser akan membuka otomatis** (jika tidak, buka `http://localhost:8501`)
+5. **Browser akan membuka otomatis** dengan URL `http://localhost:8501`
 
 ### Fitur Dashboard
 
