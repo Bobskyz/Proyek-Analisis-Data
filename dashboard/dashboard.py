@@ -10,12 +10,16 @@ st.set_page_config(page_title="E-Commerce Analytics Dashboard", layout="wide")
 # Load data dengan caching
 @st.cache_data
 def load_data():
-    orders = pd.read_csv("orders_dataset.csv")
-    order_payments = pd.read_csv("order_payments_dataset.csv")
-    order_items = pd.read_csv("order_items_dataset.csv")
-    products = pd.read_csv("products_dataset.csv")
-    order_reviews = pd.read_csv("order_reviews_dataset.csv")
-    category_translation = pd.read_csv("product_category_name_translation.csv")
+    import os
+    # Tentukan path folder yang sama dengan dashboard.py
+    data_path = os.path.dirname(__file__)
+    
+    orders = pd.read_csv(os.path.join(data_path, "orders_dataset.csv"))
+    order_payments = pd.read_csv(os.path.join(data_path, "order_payments_dataset.csv"))
+    order_items = pd.read_csv(os.path.join(data_path, "order_items_dataset.csv"))
+    products = pd.read_csv(os.path.join(data_path, "products_dataset.csv"))
+    order_reviews = pd.read_csv(os.path.join(data_path, "order_reviews_dataset.csv"))
+    category_translation = pd.read_csv(os.path.join(data_path, "product_category_name_translation.csv"))
 
     # Konversi tanggal
     date_cols = ['order_purchase_timestamp', 'order_approved_at',
