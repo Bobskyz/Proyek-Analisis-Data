@@ -22,20 +22,27 @@ Proyek ini menganalisis dataset e-commerce public Brazil yang mencakup data dari
 
 ```
 Proyek-Analisis-Data/
-├── Proyek_Analisis_Data.ipynb          # Notebook analisis lengkap
-├── dashboard.py                         # Dashboard interaktif Streamlit
-├── requirements.txt                     # Daftar library Python yang diperlukan
+├── notebook.ipynb                      # Notebook analisis lengkap
+├── requirements.txt                    # Daftar library Python yang diperlukan
 ├── README.md                           # File dokumentasi ini
-└── E-Commerce Public Dataset/          # Folder dataset
-    ├── customers_dataset.csv
-    ├── geolocation_dataset.csv
-    ├── order_items_dataset.csv
-    ├── order_payments_dataset.csv
-    ├── order_reviews_dataset.csv
-    ├── orders_dataset.csv
-    ├── product_category_name_translation.csv
-    ├── products_dataset.csv
-    └── sellers_dataset.csv
+├── url.txt                             # URL deployment dashboard
+├── dashboard/                          # Folder aplikasi dashboard Streamlit
+│   ├── dashboard.py                    # Script dashboard interaktif
+│   ├── orders_dataset.csv              # Data order (raw)
+│   ├── order_items_dataset.csv         # Data item per order (raw)
+│   ├── order_payments_dataset.csv      # Data pembayaran (raw)
+│   ├── order_reviews_dataset.csv       # Data review produk (raw)
+│   ├── products_dataset.csv            # Data produk (raw)
+│   └── product_category_name_translation.csv  # Terjemahan kategori
+└── data/                               # Folder hasil export analisis
+    ├── monthly_revenue.csv             # Pendapatan bulanan
+    ├── orders_revenue.csv              # Pendapatan per pesanan
+    ├── order_payments_grouped.csv      # Pembayaran yang dikelompokkan
+    ├── category_stats.csv              # Statistik kategori produk
+    ├── top_categories.csv              # Top 10 kategori dengan skor tertinggi
+    ├── bottom_categories.csv           # 10 kategori dengan skor terendah
+    ├── orders_products_reviews.csv     # Data pesanan dengan kategori & review
+    └── rfm_analysis.csv                # Analisis RFM pelanggan
 ```
 
 ---
@@ -80,7 +87,7 @@ Proyek-Analisis-Data/
 
 1. **Buka file notebook** di VS Code:
    ```powershell
-   code Proyek_Analisis_Data.ipynb
+   code notebook.ipynb
    ```
 
 2. **Pilih Python Kernel**:
@@ -105,16 +112,17 @@ Jika ingin menggunakan Jupyter Notebook di browser:
 jupyter notebook
 ```
 
-Kemudian buka `Proyek_Analisis_Data.ipynb` dari browser.
-2. **Buka file** `Proyek_Analisis_Data.ipynb` dari browser yang terbuka
+Kemudian buka `notebook.ipynb` dari browser.
 
-3. **Jalankan setiap cell** secara berurutan atau gunakan `Run All`:
+1. **Buka file** `notebook.ipynb` dari browser yang terbuka
+
+2. **Jalankan setiap cell** secara berurutan atau gunakan `Run All`:
    - Menu: `Cell` → `Run All`
    - Atau tekan `Ctrl + A` lalu `Shift + Enter`
 
 ### Menggunakan VS Code
 
-1. Buka file `Proyek_Analisis_Data.ipynb` di VS Code
+1. Buka file `notebook.ipynb` di VS Code
 2. Pilih Python kernel di bagian atas notebook
 3. Jalankan cells dengan mengklik tombol ▶️ atau tekan `Shift + Enter`
 
@@ -138,9 +146,9 @@ Dashboard interaktif dibangun dengan **Streamlit** dan memungkinkan visualisasi 
    venv\Scripts\activate
    ```
 
-4. **Jalankan Dashboard**:
+4. **Jalankan Dashboard dari folder dashboard**:
    ```powershell
-   streamlit run dashboard.py
+   streamlit run dashboard/dashboard.py
    ```
 
 5. **Browser akan membuka otomatis** dengan URL `http://localhost:8501`
@@ -158,7 +166,26 @@ Tekan `Ctrl + C` di terminal untuk menghentikan server Streamlit.
 
 ---
 
-## 🎯 Pertanyaan Bisnis & Insight
+## 📊 Export Data & Folder Data
+
+Notebook menghasilkan file analisis yang sudah diekspor ke format CSV untuk kemudahan penggunaan lebih lanjut:
+
+### File Export (Folder `data/`)
+
+| File | Deskripsi |
+|------|-----------|
+| `monthly_revenue.csv` | Pendapatan bulanan dengan breakdown per bulan (Oktober 2016 - Agustus 2018) |
+| `orders_revenue.csv` | Detail pendapatan setiap pesanan yang berhasil delivered |
+| `order_payments_grouped.csv` | Pembayaran yang dikelompokkan dan diagregasi |
+| `category_stats.csv` | Statistik kategori produk: rata-rata review score dan jumlah order |
+| `top_categories.csv` | Top 10 kategori dengan skor review tertinggi |
+| `bottom_categories.csv` | 10 kategori dengan skor review terendah |
+| `orders_products_reviews.csv` | Data lengkap pesanan dengan kategori produk dan review score |
+| `rfm_analysis.csv` | Hasil analisis RFM (Recency, Frequency, Monetary) pelanggan |
+
+Semua file dapat digunakan untuk analisis lanjutan atau integration dengan tool BI lainnya.
+
+---
 
 ### Pertanyaan 1: Tren Pendapatan Bulanan (2016-2018)
 
